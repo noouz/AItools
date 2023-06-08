@@ -835,6 +835,9 @@ footer .toTop {
   .header-container .navbar-menu {
     display: none;
   }
+  .header .banner {
+    margin-bottom: 190px;
+  }
   .header .banner-p h1 {
     font-size: 3rem;
   }
