@@ -836,7 +836,7 @@ footer .toTop {
     display: none;
   }
   .header .banner-p h1 {
-    font-size: 3rem !important;
+    font-size: 3rem;
   }
   .applications .tools-title-search ul {
     justify-content: flex-start;
