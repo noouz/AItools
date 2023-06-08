@@ -1,0 +1,250 @@
+@import "../style/variable";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;}
+
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+*{
+    line-height: $line-height-medium;
+}
+
+body{
+    font-family: $body-font;
+    background-color: $bg-color;
+    color:$second-color;
+    font-weight: $font-regular; //400
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: $second-color;
+}
+
+
+.start-btn{
+    display: inline-block;
+    border: solid 1px $second-color;
+    border-radius: 10px;
+    padding: 1.25rem 2.5rem;
+    font-weight: $font-bold;
+    font-size: $small-font-size;
+}
+
+
+.mb-160{
+    margin-bottom: 160px;
+}
+.mb-120{
+    margin-bottom: 120px;
+}
+.mb-80{
+    margin-bottom: 80px;
+}
+.mb-60{
+    margin-bottom: 60px;
+}
+.mb-40{
+    margin-bottom: 40px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+
+.pb-20{
+    padding-bottom: 20px;
+}
+
+.lh-150{
+    line-height: 150%;
+}
+
+.fw-700{
+    font-weight: $font-medium;
+}
+
+
+//動畫
+.scrollUp {
+    animation-name: scrollUp;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.5, 0.02, 0.3, 0.8);
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(190px);
+      }
+    50% {
+        transform: translateY(0px);
+      }
+    75% {
+        transform: translateY(0px);
+      }
+    100% {
+        transform: translateY(-250px);
+      }
+}
+
+
+@keyframes scalein {
+    from {
+        transform: scale(1);
+      }
+
+    to {
+        transform: scale(1.2);
+      }
+}
+@keyframes scaleout {
+    from {
+        transform: scale(1.2);
+      }
+
+    to {
+        transform: scale(1);
+      }
+}
+
+
+
+.delay1{
+    animation-delay: 0.3s;
+}
+.delay2{
+    animation-delay: 0.1s;
+}
+
+.pagebtn{
+    display: inline-block;
+    background-color: $second-color;
+    border: solid 1px transparent;
+    border-radius: .9rem;
+    padding: .6rem 1rem;
+    cursor: pointer;
+    
+    a{
+        color: $first-color;
+        font-size:$smaller-font-size;
+        font-weight: $font-medium;
+
+    }
+    
+    &:hover {
+        background-color: transparent;
+        border: solid 1px  $fourth-color;
+        a{
+            color: $fourth-color;
+        }
+    }
+
+    &:active {
+        background-color: $first-color;
+        a{
+            color: $second-color;
+        }
+    }
+        
+}
+
+
+
+.pagebtn-current{
+    background-color: $first-color;
+    a{
+        color: $third-color;
+    }
+
+    &:hover {
+        background-color: $first-color;
+        border: solid 1px  $first-color;
+        a{
+            color: $second-color;
+        }
+    }
+        
+}
+
+.inputbtn{
+    display: inline-block;
+    align-self: center;
+    background-color: $second-color;
+    text-align: center;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    
+    a{
+        color: $third-color; 
+        font-size:$smaller-font-size;
+        font-weight: $font-regular;
+    }
+    
+    &:hover {
+        background-color: $third-color;
+        a{
+            font-weight: $font-medium;
+            color: $first-color !important;
+            transition:  .2s ease-in;
+        }
+    }
+
+    &:active {
+        background-color: $third-color;
+        a{
+            color: $first-color;
+            font-weight: $font-medium;
+        }
+    }
+        
+}
+
+.inputbtn-current{
+    background-color: $third-color;
+    a{
+        color: $first-color !important;
+        font-weight: $font-medium;
+    }
+        
+}
+
+
+.active{
+    border: solid 1px  #525252;
+    border-radius: 1rem;
+}
+
+.hide{
+    display: none;
+}
+
+
+.owl-theme .owl-dots .owl-dot span{
+    background: #525252;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #f0f0f0;
+}
+
+
+
