@@ -835,6 +835,9 @@ footer .toTop {
   .header-container .navbar-menu {
     display: none;
   }
+  .header .banner-p h1 {
+    font-size: 3rem !important;
+  }
   .applications .tools-title-search ul {
     justify-content: flex-start;
   }
