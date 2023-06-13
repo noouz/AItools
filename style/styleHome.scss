@@ -1,74 +1,88 @@
 @import "../style/settings.scss";
 
 
-.container {
-    max-width: 1296px;
+main {
+    max-width: 1320px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     padding: 0 12px;
 }
 
-.header{
-    &-container{
-        padding: 20px 0;
+.navbar{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 20px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1{
+        a{
+            background-image:url('../img/logo.png');
+            width: 245px;
+            height: 40px;
+            text-indent: 101%;
+            overflow:hidden;
+            white-space: nowrap;
+            float:left;
+        }
+    }
+    
+
+    &-menu{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: solid 1px $second-color;
-
-        .navbar-menu{
-            display: flex;
-            
-            li{
-                margin-left: 20px;
-            }
+        
+        li{
+            margin-left: 20px;
         }
+    }
 
-        .navbar-btn {
-            cursor: pointer;
-            background-color: transparent;
-            border: 0;
-            color: #ffffff;
-            font-size: 1.25rem;
-            display: none; 
+    &-btn {
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        color: #ffffff;
+        font-size: 1.25rem;
+        display: none; 
 
-            &:hover {
-                transform: scale(1.1);
-            }
+        &:hover {
+            transform: scale(1.1);
         }
-          
-        .navbar-collapse {
-            display: none; 
-            position: absolute;
-            top: 67px;
-            left: 10px;
-            width: 96%;
-            min-height:100vh; 
-            background-color: $first-color;
-            border-top: 1px solid #ffffff;
+    }
+      
+    &-collapse {
+        display: none; 
+        position: absolute;
+        top: 70.8px;
+        width: calc(100vw - 24px);
+        min-height: calc(100vh - 180px);
+        background-color: $first-color;
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
 
-            a {
-                font-size: 80px;
-                line-height: 1.2;
-                margin: 4px 0;
-            }
-
-        }
-
-        .show {
-            display: flex;
-            padding-top: 200px;
-            align-items: start;
-            justify-content: center;
+        a {
+            font-size: 80px;
+            line-height: 1.2;
+            margin: 4px 0;
         }
 
     }
 
+    .show {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+header{
     .banner{
-        
+        padding-top: 60px;
+        border-top: solid 1px $second-color;
         &-p{
-            h1{
+            h2{
                 font-weight: $font-bold;
                 font-size: $biggest-font-size;
             }
@@ -89,7 +103,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    h1{font-size: $normal-font-size; }
+    h2{font-size: $normal-font-size; }
     &-title{
         display: flex;
         justify-content: space-between;
@@ -118,7 +132,7 @@
                 height: 68px;
                 margin-bottom: 20px;
             }
-            h1{
+            h2{
                 margin-bottom: 20px;
             }
             p{
@@ -133,12 +147,15 @@
 }
 
 .partners{
-    h1{font-size: $normal-font-size; }
+    h2{font-size: $normal-font-size; }
     position: relative;
     &-logo{
+        overflow-x: auto;
+        &::-webkit-scrollbar{
+            width: 0;
+        }
         &-img{
             max-width: 100%;
-            overflow: hidden;
 
             &-1{
                 display: flex;
@@ -173,39 +190,39 @@
         flex-wrap: wrap;
         justify-content: space-between;
         row-gap: 20px;
-        column-gap: 12px;
+        column-gap: 24px;
 
         &-item{
-            max-width: 100%;
-            min-height: 400px;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            row-gap: 20px;
             padding: 40px;
             background-color: rgba(255, 255, 255, 0.08);
             border-radius: 16px;
 
             .star{
-                img{
+                max-height: 16px;
                 max-width: 96px;
-                }
+            }
+
+            .words{
+                flex-basis: 215px;
             }
 
             .user{
                 display: flex;
-                min-width: 220px;
+                max-height: 49px;
                 column-gap: 16px;
                 img{
-                    max-height: 48px;
                     max-width: 48px;
                 }
                 
                 &-infor{
-                    display: block;
                     font-size: $smallest-font-size;
                     font-weight: $font-regular;
                     line-height: $line-height-large;
-                    h2{
+                    h3{
+                        font-size: 1rem;
                         padding-bottom: 4px;
                     }
                 }
@@ -287,7 +304,7 @@
                     color: #919191;
                     pointer-events: none;
 
-                    i{
+                    span{
                         font-size: $small-font-size;
                     }
                 }
@@ -325,10 +342,14 @@
                         background-color: $second-color;
                         border: 1px solid $third-color;
                         border-radius: 1rem;
+                    }
 
+                    .input-active{
+                        border: 1px solid $fourth-color;
+                        border-radius: 1rem;
                     }
                 
-                    i{
+                    span{
                         position: absolute;
                         right: 1.5rem;
                         top:1.3rem;
@@ -461,7 +482,21 @@
             display: flex;
             justify-content: end;
             ul{
-                li{margin-left: .5rem;}
+                display: flex;
+                align-items: center;
+                li{
+                    margin-left: .5rem;
+                    a{
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        span{
+                            font-size: 1.25rem;
+                            font-weight: 500;
+                        }
+                        
+                    }
+                }
             }
         }
 
@@ -472,6 +507,7 @@
 .startNow{
     margin: 0 auto;
     width: 100%;
+    border-bottom: solid 1px $second-color;
 
     &-container{
         display: flex;
@@ -487,9 +523,10 @@
             text-align: center;
         }
 
-        a{
+        button{
             letter-spacing:.05rem;
-            i{ transform: rotate(135deg);}
+            display: flex;
+            align-items: center;
         }
     }
     
@@ -511,8 +548,8 @@
 }
 
 footer{
+    max-width: 1320px;
     padding: 0 1rem;
-    border-top: solid 1px $second-color;
     margin: 1.25rem auto;
     width: 100%;
     display: flex;
@@ -541,17 +578,22 @@ footer{
     }
 }
 
+
+//隱藏用
+.hide{
+    display: none;
+}
+
+//media screen
 @media screen and (max-width:960px){
-    .header{
-        &-container{
-            .logo{
-                h1{img{height: 24px;}}
-            }
-            
-        }
+    .navbar{
+        h1{height: 24px;}
+        
+    }
+    header{
         .banner{
             &-p{
-                h1{
+                h2{
                     font-size: $bigger-font-size ;
                 } 
             }
@@ -561,7 +603,7 @@ footer{
     .service{
         &-title{
             display: block;
-            h1{margin-bottom: 24px;}
+            h2{margin-bottom: 24px;}
             p{font-size: $big-font-size ;}
         }
 
@@ -624,12 +666,8 @@ footer{
 }
 
 @media screen and (max-width:720px){
-    .header{
+    header{
         margin-bottom: 120px;
-        img{
-            height:100%;
-        }
-        
     }
 
     .service{
@@ -739,26 +777,53 @@ footer{
 }
 
 @media screen and (max-width:600px){
-    .header{
-        &-container{
-            .navbar-btn {
-                display: block;
-              }
-            
-            .navbar-menu {
-                display: none;
+    .navbar{
+        h1{
+            a{
+                background-size: 147px 24px;
+                background-repeat: no-repeat;
             }
-            
         }
-
+        &-btn {
+            display: block;
+          }
+        
+        &-menu {
+            display: none;
+        }
+        
+    }
+    header{
+        margin-bottom: 120px !important;
         .banner{
             margin-bottom: 190px;
             &-p{
-                h1{
+                h2{
                     font-size: $big-font-size ;
                 } 
             }
         }
+    }
+
+    .service{
+        &-title{
+            h2{font-size: 20px;}
+            p{font-size: $normal-font-size;}
+        }
+
+        &-features{
+            &-item{
+                height: 320px;
+            }
+        }
+    }
+
+    .partners{
+        h2{
+            margin-bottom: 24px;
+            font-size: 24px;
+        }
+        &-logo-img{margin-bottom: 40px;}
     }
 
     .applications{
@@ -770,26 +835,30 @@ footer{
             }
         }
     }
-}
 
-@media screen and (min-width:601px){
-    .header{
-        &-container{
-            .navbar-btn {
-                display: none;
-              }
-            
-            .navbar-menu {
-                display: flex;
-            }
-
-            .navbar-collapse{
-                display: none;
-            }
-            
-        }
+    .bottom{
+        position: absolute;
+        bottom: 0;
     }
 }
+
+// @media screen and (min-width:601px){
+//     .navbar{
+//         &-btn {
+//             display: none;
+//             }
+        
+//         &-menu {
+//             display: flex;
+//         }
+
+//         &-collapse{
+//             display: none ;
+//         }
+//     }
+
+
+// }
 
 
 

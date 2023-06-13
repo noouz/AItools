@@ -1,7 +1,6 @@
 @import "../style/variable";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
 
-
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -39,17 +38,7 @@ a{
     color: $second-color;
 }
 
-
-.start-btn{
-    display: inline-block;
-    border: solid 1px $second-color;
-    border-radius: 10px;
-    padding: 1.25rem 2.5rem;
-    font-weight: $font-bold;
-    font-size: $small-font-size;
-}
-
-
+//margin
 .mb-160{
     margin-bottom: 160px;
 }
@@ -125,8 +114,6 @@ a{
       }
 }
 
-
-
 .delay1{
     animation-delay: 0.3s;
 }
@@ -134,7 +121,27 @@ a{
     animation-delay: 0.1s;
 }
 
+
+//button
+.start-btn{
+    display: inline-block;
+    background-color: $first-color;
+    color: $second-color;
+    border: solid 1px $second-color;
+    border-radius: 10px;
+    padding: 1.25rem 2.5rem;
+    font-weight: $font-bold;
+    font-size: $small-font-size;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $second-color;
+        color:$first-color;
+    }
+}
+
 .pagebtn{
+    max-width: 43px;
     display: inline-block;
     background-color: $second-color;
     border: solid 1px transparent;
@@ -165,8 +172,6 @@ a{
     }
         
 }
-
-
 
 .pagebtn-current{
     background-color: $first-color;
@@ -207,14 +212,6 @@ a{
             transition:  .2s ease-in;
         }
     }
-
-    &:active {
-        background-color: $third-color;
-        a{
-            color: $first-color;
-            font-weight: $font-medium;
-        }
-    }
         
 }
 
@@ -228,13 +225,12 @@ a{
 }
 
 
-.active{
-    border: solid 1px  #525252;
-    border-radius: 1rem;
-}
 
-.hide{
-    display: none;
+
+//others
+.noItem{
+   padding-top: 100px;
+    font-size: $small-font-size;
 }
 
 

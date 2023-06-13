@@ -36,15 +36,6 @@ a {
   color: #FFFFFF;
 }
 
-.start-btn {
-  display: inline-block;
-  border: solid 1px #FFFFFF;
-  border-radius: 10px;
-  padding: 1.25rem 2.5rem;
-  font-weight: 900;
-  font-size: 1.25rem;
-}
-
 .mb-160 {
   margin-bottom: 160px;
 }
@@ -126,7 +117,24 @@ a {
   animation-delay: 0.1s;
 }
 
+.start-btn {
+  display: inline-block;
+  background-color: #020202;
+  color: #FFFFFF;
+  border: solid 1px #FFFFFF;
+  border-radius: 10px;
+  padding: 1.25rem 2.5rem;
+  font-weight: 900;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.start-btn:hover {
+  background-color: #FFFFFF;
+  color: #020202;
+}
+
 .pagebtn {
+  max-width: 43px;
   display: inline-block;
   background-color: #FFFFFF;
   border: solid 1px transparent;
@@ -189,13 +197,6 @@ a {
   color: #020202 !important;
   transition: 0.2s ease-in;
 }
-.inputbtn:active {
-  background-color: #F2F2F2;
-}
-.inputbtn:active a {
-  color: #020202;
-  font-weight: 700;
-}
 
 .inputbtn-current {
   background-color: #F2F2F2;
@@ -205,13 +206,9 @@ a {
   font-weight: 700;
 }
 
-.active {
-  border: solid 1px #525252;
-  border-radius: 1rem;
-}
-
-.hide {
-  display: none;
+.noItem {
+  padding-top: 100px;
+  font-size: 1.25rem;
 }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -222,28 +219,38 @@ a {
   background: #f0f0f0;
 }
 
-.container {
-  max-width: 1296px;
+main {
+  max-width: 1320px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding: 0 12px;
 }
 
-.header-container {
-  padding: 20px 0;
+.navbar {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 20px 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid 1px #FFFFFF;
 }
-.header-container .navbar-menu {
+.navbar h1 a {
+  background-image: url("../img/logo.png");
+  width: 245px;
+  height: 40px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  float: left;
+}
+.navbar-menu {
   display: flex;
 }
-.header-container .navbar-menu li {
+.navbar-menu li {
   margin-left: 20px;
 }
-.header-container .navbar-btn {
+.navbar-btn {
   cursor: pointer;
   background-color: transparent;
   border: 0;
@@ -251,35 +258,39 @@ a {
   font-size: 1.25rem;
   display: none;
 }
-.header-container .navbar-btn:hover {
+.navbar-btn:hover {
   transform: scale(1.1);
 }
-.header-container .navbar-collapse {
+.navbar-collapse {
   display: none;
   position: absolute;
-  top: 67px;
-  left: 10px;
-  width: 96%;
-  min-height: 100vh;
+  top: 70.8px;
+  width: calc(100vw - 24px);
+  min-height: calc(100vh - 180px);
   background-color: #020202;
   border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
-.header-container .navbar-collapse a {
+.navbar-collapse a {
   font-size: 80px;
   line-height: 1.2;
   margin: 4px 0;
 }
-.header-container .show {
+.navbar .show {
   display: flex;
-  padding-top: 200px;
-  align-items: start;
+  align-items: center;
   justify-content: center;
 }
-.header .banner-p h1 {
+
+header .banner {
+  padding-top: 60px;
+  border-top: solid 1px #FFFFFF;
+}
+header .banner-p h2 {
   font-weight: 900;
   font-size: 7.5rem;
 }
-.header .banner-animation {
+header .banner-animation {
   margin-top: 120px;
   overflow: hidden;
   display: flex;
@@ -292,7 +303,7 @@ a {
   flex-direction: column;
   justify-content: center;
 }
-.service h1 {
+.service h2 {
   font-size: 2rem;
 }
 .service-title {
@@ -321,7 +332,7 @@ a {
   height: 68px;
   margin-bottom: 20px;
 }
-.service-features-item h1 {
+.service-features-item h2 {
   margin-bottom: 20px;
 }
 .service-features-item p {
@@ -333,12 +344,17 @@ a {
 .partners {
   position: relative;
 }
-.partners h1 {
+.partners h2 {
   font-size: 2rem;
+}
+.partners-logo {
+  overflow-x: auto;
+}
+.partners-logo::-webkit-scrollbar {
+  width: 0;
 }
 .partners-logo-img {
   max-width: 100%;
-  overflow: hidden;
 }
 .partners-logo-img-1 {
   display: flex;
@@ -368,37 +384,38 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 20px;
-  column-gap: 12px;
+  column-gap: 24px;
 }
 .partners-thoughts-item {
-  max-width: 100%;
-  min-height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  row-gap: 20px;
   padding: 40px;
   background-color: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
 }
-.partners-thoughts-item .star img {
+.partners-thoughts-item .star {
+  max-height: 16px;
   max-width: 96px;
+}
+.partners-thoughts-item .words {
+  flex-basis: 215px;
 }
 .partners-thoughts-item .user {
   display: flex;
-  min-width: 220px;
+  max-height: 49px;
   column-gap: 16px;
 }
 .partners-thoughts-item .user img {
-  max-height: 48px;
   max-width: 48px;
 }
 .partners-thoughts-item .user-infor {
-  display: block;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 150%;
 }
-.partners-thoughts-item .user-infor h2 {
+.partners-thoughts-item .user-infor h3 {
+  font-size: 1rem;
   padding-bottom: 4px;
 }
 .partners-thoughts-click {
@@ -467,7 +484,7 @@ a {
   color: #919191;
   pointer-events: none;
 }
-.applications .tools-title-input .placeholder i {
+.applications .tools-title-input .placeholder span {
   font-size: 1.25rem;
 }
 .applications .tools-title-input input:focus + .placeholder {
@@ -498,7 +515,11 @@ a {
   border: 1px solid #F2F2F2;
   border-radius: 1rem;
 }
-.applications .tools-title-search .input-btn i {
+.applications .tools-title-search .input-btn .input-active {
+  border: 1px solid #525252;
+  border-radius: 1rem;
+}
+.applications .tools-title-search .input-btn span {
   position: absolute;
   right: 1.5rem;
   top: 1.3rem;
@@ -609,13 +630,27 @@ a {
   display: flex;
   justify-content: end;
 }
+.applications .tools-pagination ul {
+  display: flex;
+  align-items: center;
+}
 .applications .tools-pagination ul li {
   margin-left: 0.5rem;
+}
+.applications .tools-pagination ul li a {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.applications .tools-pagination ul li a span {
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .startNow {
   margin: 0 auto;
   width: 100%;
+  border-bottom: solid 1px #FFFFFF;
 }
 .startNow-container {
   display: flex;
@@ -630,11 +665,10 @@ a {
   font-weight: 900;
   text-align: center;
 }
-.startNow-container a {
+.startNow-container button {
   letter-spacing: 0.05rem;
-}
-.startNow-container a i {
-  transform: rotate(135deg);
+  display: flex;
+  align-items: center;
 }
 .startNow .siteMap {
   max-width: 100%;
@@ -651,8 +685,8 @@ a {
 }
 
 footer {
+  max-width: 1320px;
   padding: 0 1rem;
-  border-top: solid 1px #FFFFFF;
   margin: 1.25rem auto;
   width: 100%;
   display: flex;
@@ -678,17 +712,21 @@ footer .toTop {
   cursor: pointer;
 }
 
+.hide {
+  display: none;
+}
+
 @media screen and (max-width: 960px) {
-  .header-container .logo h1 img {
+  .navbar h1 {
     height: 24px;
   }
-  .header .banner-p h1 {
+  header .banner-p h2 {
     font-size: 5rem;
   }
   .service-title {
     display: block;
   }
-  .service-title h1 {
+  .service-title h2 {
     margin-bottom: 24px;
   }
   .service-title p {
@@ -737,11 +775,8 @@ footer .toTop {
   }
 }
 @media screen and (max-width: 720px) {
-  .header {
+  header {
     margin-bottom: 120px;
-  }
-  .header img {
-    height: 100%;
   }
   .service {
     margin-bottom: 120px;
@@ -830,30 +865,46 @@ footer .toTop {
   }
 }
 @media screen and (max-width: 600px) {
-  .header-container .navbar-btn {
+  .navbar h1 a {
+    background-size: 147px 24px;
+    background-repeat: no-repeat;
+  }
+  .navbar-btn {
     display: block;
   }
-  .header-container .navbar-menu {
+  .navbar-menu {
     display: none;
   }
-  .header .banner {
+  header {
+    margin-bottom: 120px !important;
+  }
+  header .banner {
     margin-bottom: 190px;
   }
-  .header .banner-p h1 {
+  header .banner-p h2 {
     font-size: 3rem;
+  }
+  .service-title h2 {
+    font-size: 20px;
+  }
+  .service-title p {
+    font-size: 2rem;
+  }
+  .service-features-item {
+    height: 320px;
+  }
+  .partners h2 {
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+  .partners-logo-img {
+    margin-bottom: 40px;
   }
   .applications .tools-title-search ul {
     justify-content: flex-start;
   }
-}
-@media screen and (min-width: 601px) {
-  .header-container .navbar-btn {
-    display: none;
-  }
-  .header-container .navbar-menu {
-    display: flex;
-  }
-  .header-container .navbar-collapse {
-    display: none;
+  .bottom {
+    position: absolute;
+    bottom: 0;
   }
 }

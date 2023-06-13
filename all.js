@@ -1,19 +1,51 @@
-//首頁定價按鈕
+//首頁定價burger menu
 $(".navbar-btn").click(function(){
+  //漢堡關閉切換
+  var currentText = $('.menubtn').html();
+  if (currentText === 'menu') {
+    $('.menubtn').html('close');
+  } else {
+    $('.menubtn').html('menu');
+  }
+
     $(".navbar-collapse").toggleClass("show");
-  })
+    $("main").toggleClass("hide");
+    $(".applications").toggleClass("hide");
+    $("footer").toggleClass("bottom");
+    $("footer").find(".toTop").toggleClass("hide");
+
+})
+
+//打開menu狀態下放大視窗時取消menu顯示
+$(window).resize(function() {
+  if ($(window).width() >= 601) {
+    $(".navbar-collapse").removeClass("show");
+    $("main").removeClass("hide");
+    $(".applications").removeClass("hide");
+    $("footer").removeClass("bottom");
+    $("footer").find(".toTop").removeClass("hide");
+    $('.menubtn').html('menu');
+  } 
+});
+
 
 //問題顯示/隱藏
 $(".questions-item2-ul li").click(function() {
     $(this).find(".answer").slideToggle();
-    $(this).find(".bx-x").toggle();
-    $(this).find(".bx-minus").toggle();
+    $(this).find(".add").toggle();
+    $(this).find(".remove").toggle();
   })
+
+//To top
+  $('.toTop').click(function(){
+    $('html,body').animate({ scrollTop: 0 },'slow');   /* 返回到最頂上 */
+    return false;
+});
 
 //評論carousel
 $('.owl-carousel').owlCarousel({
     loop:false,
-    margin:10,
+    margin:24,
     nav:false,
     responsive:{
         0:{
@@ -32,8 +64,13 @@ $('.owl-carousel').owlCarousel({
 })
 
 //篩選+排序清單顯示/隱藏
+$('.inputbtn').click(function(){
+    $(this).addClass("inputbtn-current").siblings().removeClass('inputbtn-current');
+})
+
+//分類按鈕互動
 $('.input-btn').click(function(){
-    $(this).toggleClass("active");
+    $(this).find("input").toggleClass("input-active");
     $(this).find('.hide').toggle();
 })
 
@@ -85,14 +122,31 @@ function renderWorks() {
         <div class="tools-list-item-tag">
           <p>#${item.type}</p>
           <a href="${item.link}" target="_blank">
-            <i class='bx bxs-share-alt'></i>
+          <span class="material-symbols-outlined">share</span>
           </a>
         </div>
     </li>`
   });
+  
+  //此分類撈不到資料時提示"目前尚無資料"
+  if(works.length === 0){
+    works += /*html*/`<div class="noItem">目前尚無資料</div>`
+  }
 
   list.innerHTML = works;
 }
+
+
+// 目前無作品提示選染至畫面
+// function renderWorks() {
+//   let works = '';
+
+//   worksData.forEach((item) => {
+//     works += /*html*/`<div class="noItem">目前尚無資料</div>`
+//   });
+
+//   list.innerHTML = works;
+// }
 
 // 切換分頁
 function changePage(pagesData) {
@@ -128,7 +182,7 @@ function renderPages() {
   if (pagesData.has_next) {
     pageStr +=  /*html*/`<li class="pagebtn">
       <a class="page-link" href="#">
-        <i class='bx bx-chevron-right'></i>
+      <span class="material-symbols-outlined">keyboard_arrow_right</span>
       </a>
     </li>`
   };

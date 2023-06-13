@@ -6,44 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style/styleHome.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>AI工具王</title>
+    <title>AI工具王-首頁</title>
 </head>
 <body>
-    <div class="container">
-        <div class="header mb-160">
-            <div class="header-container mb-40">
-                <div class="logo">
-                    <h1><a href=""><img src="img/logo.png" alt="logo"></a></h1>
-                </div>
+    <nav class="navbar">
+        <h1><a href="Home.html">AI工具王</a></h1>
 
-                <button class="navbar-btn" type="button" >
-                    <i class='bx bx-menu'></i>
-                </button>
+        <button class="navbar-btn" type="button" >
+            <span class="material-symbols-outlined menubtn">menu</span>
+        </button>
 
-                <ul class="navbar-menu">
-                    <li><a href="Home-desktop.html">首頁</a></li>
-                    <li><a href="Pricing-desktop.html">定價</a></li>
-                </ul>
+        <ul class="navbar-menu">
+            <li><a href="Home.html">首頁</a></li>
+            <li><a href="Pricing.html">定價</a></li>
+        </ul>
 
-                <div class="navbar-collapse">
-                    <ul>
-                        <li><a href="Home-desktop.html" class="">首頁</a></li>
-                        <li><a href="Pricing-desktop.html" class="">定價</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
+        <div class="navbar-collapse">
+            <ul>
+                <li><a href="Home.html" class="">首頁</a></li>
+                <li><a href="Pricing.html" class="">定價</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <header class="mb-160">
             <div class="banner mb-120">
                 <div class="banner-p mb-40">
-                    <h1>透過</h1>
-                    <h1>AI工具王的</h1>
-                    <h1>強大模型</h1>
-                    <h1>讓您的業務更聰明</h1>
+                    <h2>透過<br>AI工具王的<br>強大模型<br>讓您的業務更聰明</h2>
                 </div>
-                <a href="#applications" class="start-btn">開始使用</a>
+                <button type="button" class="start-btn" onclick="window.location.href='#applications'">開始使用</button>
             </div>
 
             <div class="banner-animation ">
@@ -52,28 +46,28 @@
                 <span><img class="scrollUp" src="img/span3.png" alt="arrow"></span>
             </div>
 
-        </div>
+        </header>
 
         <div class="service mb-160">
             <div class="service-title mb-80">
-                <h1>我們的服務</h1>
-                <p>我們相信透過 AI 技術，<br> 包括圖像識別、自然語言處理和機器翻譯等，<br>讓您更快、更準確地做出決策。 </p>
+                <h2>我們的服務</h2>
+                <p>我們相信透過 AI 技術，<br> 包括圖像識別、自然語言處理和機器翻<br>譯等，讓您更快、更準確地做出決策。 </p>
             </div>
 
             <div class="service-features">
                 <div class="service-features-item">
                     <img src="img/fast.png" alt="快速">
-                    <h1>快速</h1>
+                    <h2>快速</h2>
                     <p>我們先進的推理基礎設施提供了極短的響應時間，讓你的產品服務不間斷。</p>
                 </div>
                 <div class="service-features-item">
                     <img src="img/flexible.png" alt="靈活">
-                    <h1>靈活</h1>
+                    <h2>靈活</h2>
                     <p>我們的服務可以根據您的需求進行靈活調整，同時還可以滿足不同項目和預算的需求。</p>
                 </div>
                 <div class="service-features-item">
                     <img src="img/expansion.png" alt="擴充">
-                    <h1>擴充</h1>
+                    <h2>擴充</h2>
                     <p>我們的服務支持多種擴充選項，可以滿足您的不斷增長的AI需求。</p>
                 </div>
             </div>
@@ -81,9 +75,9 @@
         </div>
 
         <div class="partners mb-160">
-                <h1 class="mb-80">來自合作夥伴</h1>
+                <h2 class="mb-80">來自合作夥伴</h2>
                 <div class="partners-logo mb-160">
-                    <div class="partners-logo-img mb-160">
+                    <div class="partners-logo-img">
                         <div class="partners-logo-img-1 mb-30 ">
                             <div class="dark"></div>
                             <img src="img/L1.png" alt="logo">
@@ -117,8 +111,8 @@
                         <div class="user">
                             <img src="img/陳小姐.png" alt="陳小姐">
                             <div class="user-infor">
-                                <h2>陳小姐</h2>
-                                <p>ABC科技有限公司</p>
+                                <h3>陳小姐</h3>
+                                <span>ABC科技有限公司</span>
                             </div>
                         </div>
                     </div>
@@ -130,8 +124,8 @@
                         <div class="user">
                             <img src="img/劉小姐.png" alt="劉小姐">
                             <div class="user-infor">
-                                <h2>劉小姐</h2>
-                                <p>XYZ 醫療器材有限公司</p>
+                                <h3>劉小姐</h3>
+                                <span>XYZ 醫療器材有限公司</span>
                             </div>
                         </div>
                     </div>
@@ -143,14 +137,14 @@
                         <div class="user">
                             <img src="img/黃先生.png" alt="黃先生">
                             <div class="user-infor">
-                                <h2>黃先生</h2>
-                                <p>EFG 銀行</p>
+                                <h3>黃先生</h3>
+                                <span>EFG 銀行</span>
                             </div>
                         </div>
                     </div>
                 </div>
         </div>  
-    </div>
+    </main>
 
     <div class="applications mb-80" id="applications">
         <div class="tools">
@@ -159,14 +153,14 @@
                 <div class="tools-title-input">
                     <input type="text"  name="search" id="search" >
                     <div class="placeholder">
-                        <i class='bx bx-search-alt-2'></i>
+                        <span class="material-symbols-outlined">search</span>
                         <span>輸入關鍵字搜尋</span>
                     </div>
                 </div>
                 <div class="tools-title-search mb-40">
                     <div class="input-btn filter">
                         <input type="button" value="篩選">
-                        <i class='bx bxs-filter-alt'></i>
+                        <span class="material-symbols-outlined">tune</span>
                         <div class="hide">
                             <ul class="filter-menu" id="filter-btn">
                                 <li><a>全部</a></li>
@@ -190,7 +184,7 @@
                     </ul>
                     <div class="input-btn sort">
                         <input id="btn-sort" type="button" value="由新到舊">
-                        <i class='bx bx-chevron-down'></i>
+                        <span class="material-symbols-outlined">expand_more</span>
                         <div class="hide">
                             <ul class="sort-menu" >
                                 <li id="desc"><a>由新到舊</a></li>
@@ -214,7 +208,7 @@
                         </div>
                         <div class="tools-list-item-tag">
                             <p>#聊天</p>
-                            <a href="" target="_blank"><i class='bx bxs-share-alt'></i></a>
+                            <a href="" target="_blank"><span class="material-symbols-outlined">share</span></a>
                         </div>
                     </li>
                     <li class="tools-list-item">
@@ -229,7 +223,7 @@
                         </div>
                         <div class="tools-list-item-tag">
                             <p>#影像辨識</p>
-                            <a href="" target="_blank"><i class='bx bxs-share-alt'></i></a>
+                            <a href="" target="_blank"><span class="material-symbols-outlined">share</span></a>
                         </div>
                     </li>
                     <li class="tools-list-item">
@@ -244,7 +238,7 @@
                         </div>
                         <div class="tools-list-item-tag">
                             <p>#翻譯</p>
-                            <a href="" target="_blank"><i class='bx bxs-share-alt'></i></a>
+                            <a href="" target="_blank"><span class="material-symbols-outlined">share</span></a>
                         </div>
                     </li>
                     <li class="tools-list-item">
@@ -259,7 +253,7 @@
                         </div>
                         <div class="tools-list-item-tag">
                             <p>#行銷</p>
-                            <a href="" target="_blank"><i class='bx bxs-share-alt'></i></a>
+                            <a href="" target="_blank"><span class="material-symbols-outlined">share</span></a>
                         </div>
                     </li>
                     <li class="tools-list-item">
@@ -274,7 +268,7 @@
                         </div>
                         <div class="tools-list-item-tag">
                             <p>#客服</p>
-                            <a href="" target="_blank"><i class='bx bxs-share-alt'></i></a>
+                            <a href="" target="_blank"><span class="material-symbols-outlined">share</span></a>
                         </div>
                     </li>
                     <li class="tools-list-item">
@@ -289,7 +283,7 @@
                         </div>
                         <div class="tools-list-item-tag">
                             <p>#生產力</p>
-                            <a href="" target="_blank"><i class='bx bxs-share-alt'></i></a>
+                            <a href="" target="_blank"><span class="material-symbols-outlined">share</span></a>
                         </div>
                     </li>
                 </ul>
@@ -301,46 +295,47 @@
                     <li class="pagebtn"><a class="page-link" href="#">3</a></li>
                     <li class="pagebtn"><a class="page-link" href="#">4</a></li>
                     <li class="pagebtn"><a class="page-link" href="#">5</a></li>
-                    <li class="pagebtn"><a class="page-link" href="#"><i class='bx bx-chevron-right'></i></a></li>
+                    <li class="pagebtn"><a class="page-link" href="#"><span class="material-symbols-outlined">keyboard_arrow_right</span></a></li>
                 </ul>
             </div>
             
         </div>
     </div>
 
-    <div class="container">
+    <main>
         <div class="startNow">
             <div class="startNow-container mb-80">
                 <h2>現在就來建立屬於你的服務吧</h2>
-                <a href="#applications" class="start-btn">開始使用 <i class='bx bx-arrow-back bx-rotate-90' ></i></a>
+                <button type="button" class="start-btn" onclick="window.location.href='#applications'">開始使用<span class="material-symbols-outlined">arrow_outward</span></button>
             </div>
             <div class="siteMap">
                 <h2>
-                    <a href="Home-desktop.html">首頁</a><br>
-                    <a href="Pricing-desktop.html">定價</a>
+                    <a href="Home.html">首頁</a><br>
+                    <a href="Pricing.html">定價</a>
                 </h2>
-                <img src="img/logo.png" alt="logo">
+                <a href="Home.html"><img src="img/logo.png" alt="logo"></a>
             </div>
         </div>
         
-        <footer>
-            <div class="links">
-                <div class="copyright">
-                    <p>AI工具王 ⓒ 2023</p>
-                </div>
-                <div class="social">
-                    <ul>
-                        <li><a href="https://www.facebook.com/hexschool">Facebook</a></li>
-                        <li><a href="https://twitter.com/">Twitter</a></li>
-                        <li><a href="https://www.instagram.com/hexschool/">Instgram</a></li>
-                    </ul>
-                </div>
+    </main>
+
+    <footer>
+        <div class="links">
+            <div class="copyright">
+                <p>AI工具王 ⓒ 2023</p>
             </div>
-            <div class="toTop">
-                <a href="#"><img src="img/To top.png" alt="To top"></a>
+            <div class="social">
+                <ul>
+                    <li><a href="https://www.facebook.com/hexschool">Facebook</a></li>
+                    <li><a href="https://twitter.com/">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/hexschool/">Instgram</a></li>
+                </ul>
             </div>
-        </footer>
-    </div>
+        </div>
+        <div class="toTop">
+            <a href=""><img src="img/To top.png" alt="To top"></a>
+        </div>
+    </footer>
     
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
