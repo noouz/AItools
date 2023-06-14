@@ -346,7 +346,7 @@ header{
                         position: absolute;
                         right: 1.5rem;
                         top:1.3rem;
-                        font-size: .5rem;
+                        font-size: .8rem;
                         cursor: pointer;
                         pointer-events:none;
                     }
@@ -385,7 +385,7 @@ header{
 
                 .categorytags{
                     display: flex;
-                    column-gap: .8rem;
+                    column-gap: .3rem;
                     overflow-x: auto;
                 }
 
@@ -870,6 +870,10 @@ footer{
                 }
             }
         }
+    }
+
+    .questions{
+        padding: 0;
     }
 
     .bottom{

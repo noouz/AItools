@@ -523,7 +523,7 @@ header .banner-animation {
   position: absolute;
   right: 1.5rem;
   top: 1.3rem;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   cursor: pointer;
   pointer-events: none;
 }
@@ -558,7 +558,7 @@ header .banner-animation {
 }
 .applications .tools-title-search .categorytags {
   display: flex;
-  column-gap: 0.8rem;
+  column-gap: 0.3rem;
   overflow-x: auto;
 }
 .applications .tools-title-search .categorytags::-webkit-scrollbar {

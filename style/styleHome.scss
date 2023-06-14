@@ -353,7 +353,7 @@ header{
                         position: absolute;
                         right: 1.5rem;
                         top:1.3rem;
-                        font-size: .5rem;
+                        font-size: .8rem;
                         cursor: pointer;
                         pointer-events:none;
                     }
@@ -392,7 +392,7 @@ header{
 
                 .categorytags{
                     display: flex;
-                    column-gap: .8rem;
+                    column-gap: .3rem;
                     overflow-x: auto;
                 }
 
@@ -841,24 +841,6 @@ footer{
         bottom: 0;
     }
 }
-
-// @media screen and (min-width:601px){
-//     .navbar{
-//         &-btn {
-//             display: none;
-//             }
-        
-//         &-menu {
-//             display: flex;
-//         }
-
-//         &-collapse{
-//             display: none ;
-//         }
-//     }
-
-
-// }
 
 
 
