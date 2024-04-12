@@ -50,7 +50,6 @@ main {
             transform: scale(1.1);
         }
     }
-      
     &-collapse {
         display: none; 
         position: absolute;
@@ -403,13 +402,11 @@ header{
 
             }
         
-           
         }
 
         &-list{
             max-width: 100%;
             margin: auto;
-           
             ul{
                 display: flex;
                 flex-wrap: wrap ; 
@@ -786,7 +783,7 @@ footer{
         }
         &-btn {
             display: block;
-          }
+        }
         
         &-menu {
             display: none;

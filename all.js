@@ -75,7 +75,8 @@ $('.input-btn').click(function(){
 })
 
 
-// 資料串接  (以下都是照範例3做，只有微修class名稱+添加幾段程式碼功能)
+// 資料串接  (以下有參考範例)
+// 課程期間限定開放API已失效
 const apiPath = 'https://2023-engineer-camp.zeabur.app';
 const list = document.querySelector('#list');
 const pagination = document.querySelector('#pagination');
@@ -135,18 +136,6 @@ function renderWorks() {
 
   list.innerHTML = works;
 }
-
-
-// 目前無作品提示選染至畫面
-// function renderWorks() {
-//   let works = '';
-
-//   worksData.forEach((item) => {
-//     works += /*html*/`<div class="noItem">目前尚無資料</div>`
-//   });
-
-//   list.innerHTML = works;
-// }
 
 // 切換分頁
 function changePage(pagesData) {
@@ -243,15 +232,3 @@ search.addEventListener('keydown', (e) => {
     });
 
 })
-
-
-
-   
-
-
-
-
-
-
-
-
